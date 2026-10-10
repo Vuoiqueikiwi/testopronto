@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Testo Pronto — testi per chi produce cose buone</title>
+<meta name="description" content="Schede prodotto, pagine Chi siamo e homepage per piccoli produttori e botteghe online italiane. Prima scheda riscritta gratis, consegna in 24 ore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1f2a1f;        /* verde foglia quasi nero */
+  --olive:#5c6b3c;      /* oliva */
+  --honey:#d99a2b;      /* miele */
+  --paper:#f7f3ea;      /* carta da pacco chiara */
+  --kraft:#e7dcc3;      /* carta kraft */
+  --muted:#6b6a60;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Work Sans",system-ui,sans-serif;font-size:17px;line-height:1.65}
+h1,h2,h3,.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.05;margin:0}
+p{margin:0 0 1em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+
+/* nav */
+nav .wrap{display:flex;justify-content:space-between;align-items:baseline;padding:28px 28px 0}
+.brand{font-family:"Cormorant Garamond",serif;font-size:1.6rem;font-weight:600;text-decoration:none;letter-spacing:.01em}
+.brand i{font-style:italic;color:var(--olive)}
+nav a.link{text-decoration:none;font-size:.95rem;border-bottom:1px solid var(--ink);padding-bottom:2px}
+
+/* hero */
+.hero{padding:90px 0 60px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(3rem,7.2vw,6rem);font-weight:500;letter-spacing:-.015em}
+.hero h1 em{font-style:italic;color:var(--olive)}
+.hero .lead{font-size:1.2rem;color:var(--muted);max-width:30em;margin:28px 0 36px}
+.btn{display:inline-block;text-decoration:none;font-weight:600;padding:16px 28px;border-radius:999px;background:var(--ink);color:var(--paper);font-size:1rem}
+.btn:hover,.btn:focus-visible{background:var(--olive);outline:none}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.ghost:hover{background:var(--kraft)}
+.note{display:block;margin-top:14px;font-size:.95rem;color:var(--muted)}
+
+/* etichetta */
+.label{background:#fffdf7;border:1px solid #cdbf9c;padding:34px 34px 28px;position:relative;transform:rotate(-1.5deg);box-shadow:0 18px 40px -22px rgba(31,42,31,.45)}
+.label:before{content:"";position:absolute;inset:8px;border:1px solid #cdbf9c;pointer-events:none}
+.label .small{font-size:.8rem;letter-spacing:.08em;color:var(--muted);text-align:center;margin-bottom:8px}
+.label h3{font-size:2rem;text-align:center;font-weight:500;margin-bottom:6px}
+.label hr{border:0;border-top:1px solid #cdbf9c;width:60px;margin:14px auto}
+.label p{font-family:"Cormorant Garamond",serif;font-size:1.25rem;line-height:1.45;text-align:center;margin:0}
+.label .was{margin-top:22px;padding-top:14px;border-top:1px dashed #cdbf9c;font-family:"Work Sans";font-size:.85rem;color:var(--muted);text-align:center}
+.label .was s{opacity:.8}
+.label .stamp{position:absolute;right:-18px;top:-18px;width:92px;height:92px;border-radius:50%;background:var(--honey);color:var(--ink);display:grid;place-items:center;text-align:center;font-weight:600;font-size:.8rem;line-height:1.1;transform:rotate(12deg);box-shadow:0 6px 14px -8px rgba(0,0,0,.4)}
+
+/* chi */
+.who{padding:70px 0}
+.who .wrap{display:grid;grid-template-columns:1fr 2fr;gap:40px}
+.who h2{font-size:2.2rem;font-weight:500}
+.who p{font-size:1.1rem;max-width:36em}
+.who ul{columns:2;gap:40px;padding-left:18px;margin:18px 0 0;font-size:1rem}
+.who li{margin-bottom:6px;break-inside:avoid}
+
+/* listino */
+.price{background:var(--kraft);padding:80px 0}
+.price h2{font-size:2.4rem;font-weight:500;margin-bottom:10px}
+.price .intro{color:var(--muted);max-width:34em}
+.menu{margin-top:40px;border-top:1.5px solid var(--ink)}
+.row{display:grid;grid-template-columns:1fr 2fr auto;gap:28px;padding:26px 0;border-bottom:1px solid rgba(31,42,31,.25);align-items:baseline}
+.row h3{font-size:1.6rem;font-weight:500}
+.row .desc{color:#3d4336}
+.row .desc span{display:block;font-size:.9rem;color:var(--muted);margin-top:4px}
+.row .n{font-family:"Cormorant Garamond",serif;font-size:2rem;white-space:nowrap}
+.row .n small{font-family:"Work Sans";font-size:.8rem;color:var(--muted);display:block;text-align:right;line-height:1}
+
+/* come */
+.how{padding:80px 0}
+.how h2{font-size:2.4rem;font-weight:500;margin-bottom:36px}
+.how ol{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:s}
+.how li{counter-increment:s;border-left:2px solid var(--honey);padding-left:18px}
+.how li:before{content:counter(s);font-family:"Cormorant Garamond",serif;font-size:2.4rem;color:var(--olive);display:block;line-height:1;margin-bottom:8px}
+.how b{display:block;font-weight:600;margin-bottom:6px}
+.how p{color:#3d4336;margin:0}
+
+/* finale */
+.final{background:var(--ink);color:var(--paper);padding:96px 0;text-align:center}
+.final h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:500;max-width:16em;margin:0 auto 18px}
+.final h2 em{font-style:italic;color:var(--honey)}
+.final p{color:#c8c9bd;max-width:32em;margin:0 auto 32px;font-size:1.1rem}
+.final .btn{background:var(--honey);color:var(--ink)}
+.final .btn:hover{background:#f0b23a}
+.final .btn.ghost{background:transparent;color:var(--paper);border-color:var(--paper)}
+.final .btn.ghost:hover{background:rgba(255,255,255,.08)}
+.ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+footer{padding:28px 0;font-size:.9rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media(max-width:820px){
+  .hero .wrap,.who .wrap{grid-template-columns:1fr}
+  .hero{padding:56px 0 40px}
+  .label{transform:none;margin-top:10px}
+  .who ul{columns:1}
+  .row{grid-template-columns:1fr;gap:6px}
+  .row .n small{text-align:left}
+  .how ol{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#">Testo <i>Pronto</i></a>
+  <a class="link" href="#listino">Listino</a>
+</div></nav>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <h1>Fai cose buone.<br>Ora <em>raccontale</em> bene.</h1>
+    <p class="lead">Scrivo schede prodotto, pagine Chi siamo e homepage per chi produce olio, miele, vino, conserve, pane, formaggi. Testi che sanno di territorio e fanno comprare.</p>
+    <a class="btn" href="#contatto">Riscrivo gratis una tua scheda</a>
+    <span class="note">Senza impegno. Me la mandi, te la rimando in 24 ore.</span>
+  </div>
+  <div class="label">
+    <div class="stamp">prima<br>scheda<br>gratis</div>
+    <div class="small">MIELE DI CASTAGNO · 500 g</div>
+    <h3>Il miele che non è dolce</h3>
+    <hr>
+    <p>Amaro in fondo, pieno di legno e tannino. Non è un miele per chi cerca zucchero: è per chi cucina. Sul pecorino stagionato, in una marinata, sciolto nello yogurt al mattino. Lo raccogliamo a fine giugno dai castagneti sopra il paese e lo invasiamo a mano, senza filtrare.</p>
+    <div class="was">prima diceva: <s>“Miele di castagno prodotto dalle nostre api. Colore scuro, sapore intenso. Vasetto da 500 grammi.”</s></div>
+  </div>
+</div></section>
+
+<section class="who"><div class="wrap">
+  <h2>Per chi scrivo</h2>
+  <div>
+    <p>Per chi ha un prodotto che vale e un sito scritto di fretta, la sera, dopo il lavoro vero. Chi vende online da un borgo, da una cantina, da un laboratorio. Chi sa tutto del proprio prodotto ma non ha tempo di trovare le parole.</p>
+    <ul>
+      <li>Frantoi e aziende olivicole</li>
+      <li>Apicoltori</li>
+      <li>Piccole cantine</li>
+      <li>Conserve, sott'oli, confetture</li>
+      <li>Salumifici e caseifici</li>
+      <li>Forni, pastifici, pasticcerie</li>
+      <li>Botteghe di prodotti tipici</li>
+      <li>Agriturismi con shop</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="price" id="listino"><div class="wrap">
+  <h2>Listino</h2>
+  <p class="intro">Prezzi fissi, niente preventivi. Due giri di revisione sempre inclusi: il testo è finito quando dici tu.</p>
+  <div class="menu">
+    <div class="row">
+      <h3>Una scheda prodotto</h3>
+      <div class="desc">Un prodotto raccontato come si deve, con le parole che la gente cerca su Google.<span>Consegna in 24 ore</span></div>
+      <div class="n">25 €</div>
+    </div>
+    <div class="row">
+      <h3>Tre schede prodotto</h3>
+      <div class="desc">I tre prodotti che vendono di più, scritti con lo stesso tono così lo shop suona come una voce sola.<span>Consegna in 2 giorni</span></div>
+      <div class="n">60 €</div>
+    </div>
+    <div class="row">
+      <h3>Il sito intero</h3>
+      <div class="desc">Homepage, Chi siamo e sei schede. Guardo anche cosa scrivono i tuoi concorrenti, per fare meglio.<span>Consegna in 4 giorni · tre revisioni</span></div>
+      <div class="n">120 €</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="how"><div class="wrap">
+  <h2>Come funziona</h2>
+  <ol>
+    <li><b>Mi mandi il link</b><p>Del sito e dei prodotti da scrivere. Se hai un tono che ti piace o parole che vuoi far comparire, dimmelo.</p></li>
+    <li><b>Scrivo in italiano vero</b><p>Niente frasi da catalogo, niente “eccellenza del territorio”. Il tuo prodotto, spiegato come lo spiegheresti tu a un cliente al banco.</p></li>
+    <li><b>Correggiamo insieme</b><p>Leggi, mi dici cosa cambiare, sistemo. Due volte se serve. Poi il testo è tuo.</p></li>
+  </ol>
+</div></section>
+
+<section class="final" id="contatto"><div class="wrap">
+  <h2>Mandami la scheda che <em>non ti convince.</em></h2>
+  <p>Te la riscrivo gratis entro 24 ore. Se ti piace, le altre sono 25 euro l’una, o 60 euro per tre. Se no, hai una scheda nuova e non mi devi niente.</p>
+  <div class="ctas">
+    <a class="btn" href="mailto:ciao@testopronto.it?subject=Scheda%20gratis">Scrivi a ciao@testopronto.it</a>
+    <a class="btn ghost" href="https://www.fiverr.com/thebestmusthave/scrivere-testi-per-il-tuo-ecommerce-o-sito-italiano-in-24-ore">Ordina su Fiverr</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div>Testo Pronto — testi per chi produce cose buone</div>
+  <div>ciao@testopronto.it</div>
+</div></footer>
+
+</body>
+</html>
