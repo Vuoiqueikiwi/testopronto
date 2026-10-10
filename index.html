@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Testo Pronto — testi per chi produce cose buone</title>
 <meta name="description" content="Schede prodotto, pagine Chi siamo e homepage per piccoli produttori e botteghe online italiane. Prima scheda riscritta gratis, consegna in 24 ore.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f2a1f'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='600' fill='%23d99a2b' text-anchor='middle'%3ETp%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Testo Pronto — testi per chi produce cose buone">
+<meta property="og:description" content="Schede prodotto e pagine Chi siamo per piccoli produttori italiani. La prima scheda la riscrivo gratis.">
+<meta property="og:url" content="https://testopronto.it/">
+<meta property="og:image" content="https://testopronto.it/anteprima.png">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -82,6 +90,13 @@ nav a.link{text-decoration:none;font-size:.95rem;border-bottom:1px solid var(--i
 .how b{display:block;font-weight:600;margin-bottom:6px}
 .how p{color:#3d4336;margin:0}
 
+/* chi scrive */
+.me{padding:80px 0;border-top:1px solid rgba(31,42,31,.15)}
+.me .wrap{display:grid;grid-template-columns:1fr 2fr;gap:40px;align-items:start}
+.me h2{font-size:2.2rem;font-weight:500}
+.me p{font-size:1.15rem;max-width:34em}
+.me .sign{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.6rem;color:var(--olive);margin-top:10px}
+
 /* finale */
 .final{background:var(--ink);color:var(--paper);padding:96px 0;text-align:center}
 .final h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:500;max-width:16em;margin:0 auto 18px}
@@ -97,7 +112,7 @@ footer{padding:28px 0;font-size:.9rem;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
 @media(max-width:820px){
-  .hero .wrap,.who .wrap{grid-template-columns:1fr}
+  .hero .wrap,.who .wrap,.me .wrap{grid-template-columns:1fr}
   .hero{padding:56px 0 40px}
   .label{transform:none;margin-top:10px}
   .who ul{columns:1}
@@ -177,6 +192,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     <li><b>Scrivo in italiano vero</b><p>Niente frasi da catalogo, niente “eccellenza del territorio”. Il tuo prodotto, spiegato come lo spiegheresti tu a un cliente al banco.</p></li>
     <li><b>Correggiamo insieme</b><p>Leggi, mi dici cosa cambiare, sistemo. Due volte se serve. Poi il testo è tuo.</p></li>
   </ol>
+</div></section>
+
+<section class="me"><div class="wrap">
+  <h2>Chi scrive</h2>
+  <div>
+    <p>Testo Pronto è un progetto nato nel 2026, piccolo e nuovo come i produttori per cui scrive. Dietro c'è Lorenzo, che firma ogni mail e risponde di persona. Nessuna agenzia, nessun catalogo di frasi fatte: leggo il tuo sito, capisco il prodotto, scrivo come lo spiegheresti tu al banco.</p>
+    <p>La prima scheda è gratis proprio perché non chiedo fiducia sulla parola: la chiedo sul testo.</p>
+    <div class="sign">Lorenzo</div>
+  </div>
 </div></section>
 
 <section class="final" id="contatto"><div class="wrap">
